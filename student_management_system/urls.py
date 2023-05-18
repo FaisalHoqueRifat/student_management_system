@@ -11,7 +11,13 @@ urlpatterns = [
     path('base/',views.BASE,name='base'),
 
     #login path
-    path('login/',views.LOGIN,name='login'),
+    path('',views.LOGIN,name='login'),
+    path('doLogin',views.doLogin,name='doLogin'),
+    path('doLogout',views.doLogout,name='logout'),
+
+
+    #This is Hod Panel url
+    path('Hod/Home',Hod_Views.HOME,name='hod_home'),
 
 
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
